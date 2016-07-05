@@ -12,7 +12,7 @@ import {
 import { MeteorComponent } from 'angular2-meteor';
 
 @Component({
-  selector: 'home',
+  selector: 'profile',
   template: `
   <div class="jumbotron">
   <h1 class="display-3">Hello, world!</h1>
@@ -26,6 +26,6 @@ import { MeteorComponent } from 'angular2-meteor';
   `,
   directives: []
 })
-export class HomeComponent extends MeteorComponent  { 
+export class ProfileComponent extends MeteorComponent  { 
   
 }
