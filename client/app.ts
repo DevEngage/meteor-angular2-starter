@@ -10,11 +10,12 @@ import { Component,
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import {CORE_DIRECTIVES} from '@angular/common';
 import {DROPDOWN_DIRECTIVES} from 'ng2-bootstrap';
+import {StarsBackground} from './imports/stars/stars';
 
 @Component({
   selector: 'app',
   templateUrl: '/client/app.html',
-  directives: [DROPDOWN_DIRECTIVES, CORE_DIRECTIVES]
+  directives: [DROPDOWN_DIRECTIVES, CORE_DIRECTIVES, StarsBackground]
 })
 class App { 
   public disabled:boolean = false;
