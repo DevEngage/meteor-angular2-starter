@@ -24,7 +24,7 @@ import { Mongo } from 'meteor/mongo';
         </div>
       </div>
       <div class="chat-input-container">
-        <input class="chat-input col-md-10" type="text" placeholder="Start Chatting" [(ngModel)]="message">
+        <input class="chat-input col-md-10" type="text" placeholder="Start Chatting" [(ngModel)]="message" (keyup.enter)="addMessage(message)">
         <button class="btn btn-success btn-sm col-md-2" (click)="addMessage(message)">Send</button>
       </div>
     </div>
