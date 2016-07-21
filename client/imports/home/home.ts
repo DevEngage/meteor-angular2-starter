@@ -10,6 +10,7 @@ import {
     animate 
 } from '@angular/core';
 import { MeteorComponent } from 'angular2-meteor';
+import { LoginButtons } from 'angular2-meteor-accounts-ui';
 
 @Component({
   selector: 'home',
@@ -20,11 +21,11 @@ import { MeteorComponent } from 'angular2-meteor';
   <hr class="m-y-2">
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <login-buttons></login-buttons>
   </p>
 </div>
   `,
-  directives: []
+  directives: [LoginButtons]
 })
 export class HomeComponent extends MeteorComponent  { 
   
