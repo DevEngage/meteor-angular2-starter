@@ -15,6 +15,8 @@ import {StarsBackground} from './imports/stars/stars';
 import { APP_ROUTER_PROVIDERS } from './imports/app.routes';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 
+import { HomeService } from './imports/home/home.service';
+
 @Component({
   selector: 'app',
   templateUrl: '/client/app.html',
@@ -26,6 +28,16 @@ class App {
   public items:Array<string> = ['The first choice!',
     'And another choice for you.', 'but wait! A third!'];
   public title: string = 'Meteor-Angular 2'
+
+  public search: string = '';
+
+  constructor(private homeService: HomeService) {
+
+  }
+
+  public searchIt () {
+    this.homeService.publish(this.search);
+  }
 
   public toggled(open:boolean):void {
     console.log('Dropdown is now: ', open);
@@ -40,5 +52,6 @@ class App {
 
 bootstrap(App, [
   APP_ROUTER_PROVIDERS,
-  provide(APP_BASE_HREF, { useValue: '/' })
+  provide(APP_BASE_HREF, { useValue: '/' }),
+  HomeService
 ]);

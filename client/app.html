@@ -14,10 +14,15 @@
         <a class="nav-link" [routerLink]="['/chat']">Chat</a>
       </li>-->
     </ul>
-    <form class="form-inline pull-xs-right">
-      <input class="form-control" type="text" placeholder="Search">
-      <button class="btn btn-success-outline" type="submit">Search</button>
-    </form>
+    <div class="form-inline pull-xs-right">
+      <input 
+        class="form-control" 
+        type="text" 
+        placeholder="Search" 
+        [(ngModel)]="search" 
+        (ngModelChange)="searchIt()">
+      <button class="btn btn-success-outline" (click)="searchIt()">Search</button>
+    </div>
   </nav>
 <div class="container-fluid" style="z-index: 10">
   <router-outlet></router-outlet>
